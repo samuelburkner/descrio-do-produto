@@ -5,411 +5,415 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feira Natural - Produtos com Qualidade</title>
     <style>
-       body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 20px;
-    background: linear-gradient(to bottom, #f0fdf4, #e8f5e9);
-    color: #333;
-}
-h1 {
-    color: #1e5631;
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-    text-shadow: 1px 1px 0 #c8e6c9;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(to bottom, #f0fdf4, #e8f5e9);
+            color: #333;
+        }
+        h1 {
+            color: #1e5631;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5rem;
+            text-shadow: 1px 1px 0 #c8e6c9;
+        }
 
+        .quality-badge {
+            background-color: #34a853;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 25px;
+            display: inline-block;
+            margin: 10px 0;
+            font-size: 1rem;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
 
-.quality-badge {
-    background-color: #34a853;
-    color: white;
-    padding: 10px 25px;
-    border-radius: 25px;
-    display: inline-block;
-    margin: 10px 0;
-    font-size: 1rem;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
+        .category-section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 35px;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
 
-.category-section {
-    background: white;
-    padding: 30px;
-    margin-bottom: 35px;
-    border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s ease;
-}
+        .category-section:hover {
+            transform: scale(1.01);
+        }
 
-.category-section:hover {
-    transform: scale(1.01);
-}
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            overflow-x: auto;
+        }
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    overflow-x: auto;
-}
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
 
-th, td {
-    padding: 16px 20px;
-    text-align: left;
-    border-bottom: 1px solid #e0e0e0;
-}
+        th {
+            background-color: #2e7d32;
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            text-transform: uppercase;
+        }
 
-th {
-    background-color: #2e7d32;
-    color: white;
-    font-weight: 600;
-    font-size: 1rem;
-    text-transform: uppercase;
-}
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
 
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-}
+        tr:hover {
+            background-color: #f1f8e9;
+            transition: background 0.3s ease;
+        }
 
-tr:hover {
-    background-color: #f1f8e9;
-    transition: background 0.3s ease;
-}
+        .benefits {
+            color: #2e8b57;
+            font-weight: 500;
+        }
 
-.benefits {
-    color: #2e8b57;
-    font-weight: 500;
-}
+        .product-quality {
+            font-style: italic;
+            color: #6d7f45;
+        }
 
-.product-quality {
-    font-style: italic;
-    color: #6d7f45;
-}
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding: 25px;
+            background-color: #2e7d32;
+            color: white;
+            border-radius: 15px;
+            font-size: 1.1rem;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+        }
+        .whatsapp-link {
+            color: #e8f5e9;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
 
-.footer {
-    text-align: center;
-    margin-top: 60px;
-    padding: 25px;
-    background-color: #2e7d32;
-    color: white;
-    border-radius: 15px;
-    font-size: 1.1rem;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-}
-.whatsapp-link {
-    color: #e8f5e9;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+        .whatsapp-link:hover {
+            color: #c8e6c9;
+        }
 
-.whatsapp-link:hover {
-    color: #c8e6c9;
-}
+        .back-button {
+            display: block;
+            width: fit-content;
+            margin: 20px auto;
+            padding: 12px 25px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
 
-
-    </style>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feira Natural - Produtos com Qualidade</title>
-    <style>
-        /* O CSS permanece o mesmo */
+        .back-button:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
-</div>
+    <a href="index.html" class="back-button">Voltar para a Loja</a>
 
     <h1>🍃 Feira Natural - Qualidade e Benefícios</h1>
 
-    <!-- Frutas -->
     <div class="category-section">
         <div class="quality-badge">🌱 100% Natural | 🚫 Sem Agrotóxicos | ✅ Certificado Orgânico</div>
         <h2>🍎 Frutas Frescas</h2>
         <table>
-          <tr><th>Produto</th><th>Benefícios</th><th>Qualidade</th><th>Preço</th></tr>
-          <tr>
-            <td>Abacate (1KG)</td>
-            <td class="benefits">Gorduras saudáveis, vitamina E</td>
-            <td class="product-quality">Cultivo agroecológico</td>
-            <td>R$ 4,99</td>
-        </tr>
+            <tr><th>Produto</th><th>Benefícios</th><th>Qualidade</th><th>Preço</th></tr>
+            <tr>
+                <td>Abacate (1KG)</td>
+                <td class="benefits">Gorduras saudáveis, vitamina E</td>
+                <td class="product-quality">Cultivo agroecológico</td>
+                <td>R$ 4,99</td>
+            </tr>
 
-        <tr>
-            <td>Abacaxi (1KG)</td>
-            <td class="benefits">Enzima bromelina para digestão</td>
-            <td class="product-quality">Colhido no ponto ideal</td>
-            <td>R$ 6,99</td>
-        </tr>
+            <tr>
+                <td>Abacaxi (1KG)</td>
+                <td class="benefits">Enzima bromelina para digestão</td>
+                <td class="product-quality">Colhido no ponto ideal</td>
+                <td>R$ 6,99</td>
+            </tr>
 
-        <tr>
-            <td>Ameixa Roxa (1KG)</td>
-            <td class="benefits">Antioxidantes e fibras</td>
-            <td class="product-quality">Seleção premium</td>
-            <td>R$ 15,99</td>
-        </tr>
+            <tr>
+                <td>Ameixa Roxa (1KG)</td>
+                <td class="benefits">Antioxidantes e fibras</td>
+                <td class="product-quality">Seleção premium</td>
+                <td>R$ 15,99</td>
+            </tr>
 
-        <tr>
-            <td>Avelã (1KG)</td>
-            <td class="benefits">Ômega-9 e vitamina B</td>
-            <td class="product-quality">Torração controlada</td>
-            <td>R$ 4,99</td>
-        </tr>
+            <tr>
+                <td>Avelã (1KG)</td>
+                <td class="benefits">Ômega-9 e vitamina B</td>
+                <td class="product-quality">Torração controlada</td>
+                <td>R$ 4,99</td>
+            </tr>
 
-        <tr>
-            <td>Banana (1KG)</td>
-            <td class="benefits">Potássio e energia rápida</td>
-            <td class="product-quality">Colhida em cacho maduro</td>
-            <td>R$ 1,99</td>
-        </tr>
+            <tr>
+                <td>Banana (1KG)</td>
+                <td class="benefits">Potássio e energia rápida</td>
+                <td class="product-quality">Colhida em cacho maduro</td>
+                <td>R$ 1,99</td>
+            </tr>
 
-        <tr>
-            <td>Caqui (1KG)</td>
-            <td class="benefits">Vitamina A e licopeno</td>
-            <td class="product-quality">Livres de machucados</td>
-            <td>R$ 3,99</td>
-        </tr>
+            <tr>
+                <td>Caqui (1KG)</td>
+                <td class="benefits">Vitamina A e licopeno</td>
+                <td class="product-quality">Livres de machucados</td>
+                <td>R$ 3,99</td>
+            </tr>
 
-        <tr>
-            <td>Coco (1 Unidade)</td>
-            <td class="benefits">Hidratação natural</td>
-            <td class="product-quality">Selecionado por peso</td>
-            <td>R$ 9,99</td>
-        </tr>
+            <tr>
+                <td>Coco (1 Unidade)</td>
+                <td class="benefits">Hidratação natural</td>
+                <td class="product-quality">Selecionado por peso</td>
+                <td>R$ 9,99</td>
+            </tr>
 
-        <tr>
-            <td>Damasco (1KG)</td>
-            <td class="benefits">Ferro e betacaroteno</td>
-            <td class="product-quality">Secagem natural</td>
-            <td>R$ 9,99</td>
-        </tr>
+            <tr>
+                <td>Damasco (1KG)</td>
+                <td class="benefits">Ferro e betacaroteno</td>
+                <td class="product-quality">Secagem natural</td>
+                <td>R$ 9,99</td>
+            </tr>
 
-        <tr>
-            <td>Goiaba (1KG)</td>
-            <td class="benefits">Vitamina C concentrada</td>
-            <td class="product-quality">Colhida diariamente</td>
-            <td>R$ 4,99</td>
-        </tr>
+            <tr>
+                <td>Goiaba (1KG)</td>
+                <td class="benefits">Vitamina C concentrada</td>
+                <td class="product-quality">Colhida diariamente</td>
+                <td>R$ 4,99</td>
+            </tr>
 
-        <tr>
-            <td>Kiwi (1KG)</td>
-            <td class="benefits">Imunidade e digestão</td>
-            <td class="product-quality">Controle de acidez</td>
-            <td>R$ 9,99</td>
-        </tr>
+            <tr>
+                <td>Kiwi (1KG)</td>
+                <td class="benefits">Imunidade e digestão</td>
+                <td class="product-quality">Controle de acidez</td>
+                <td>R$ 9,99</td>
+            </tr>
 
-        <tr>
-            <td>Laranja (1KG)</td>
-            <td class="benefits">Vitamina C e flavonoides</td>
-            <td class="product-quality">Suco abundante</td>
-            <td>R$ 5,99</td>
-        </tr>
+            <tr>
+                <td>Laranja (1KG)</td>
+                <td class="benefits">Vitamina C e flavonoides</td>
+                <td class="product-quality">Suco abundante</td>
+                <td>R$ 5,99</td>
+            </tr>
 
-        <tr>
-            <td>Limão (1KG)</td>
-            <td class="benefits">Detox e alcalinizante</td>
-            <td class="product-quality">Casca brilhante</td>
-            <td>R$ 1,99</td>
-        </tr>
+            <tr>
+                <td>Limão (1KG)</td>
+                <td class="benefits">Detox e alcalinizante</td>
+                <td class="product-quality">Casca brilhante</td>
+                <td>R$ 1,99</td>
+            </tr>
 
-        <tr>
-            <td>Maçã (1KG)</td>
-            <td class="benefits">Fibras e quercetina</td>
-            <td class="product-quality">Armazenamento refrigerado</td>
-            <td>R$ 5,99</td>
-        </tr>
+            <tr>
+                <td>Maçã (1KG)</td>
+                <td class="benefits">Fibras e quercetina</td>
+                <td class="product-quality">Armazenamento refrigerado</td>
+                <td>R$ 5,99</td>
+            </tr>
 
-        <tr>
-            <td>Manga (1KG)</td>
-            <td class="benefits">Vitamina A e enzimas digestivas</td>
-            <td class="product-quality">Maduração natural</td>
-            <td>R$ 6,99</td>
-        </tr>
+            <tr>
+                <td>Manga (1KG)</td>
+                <td class="benefits">Vitamina A e enzimas digestivas</td>
+                <td class="product-quality">Maduração natural</td>
+                <td>R$ 6,99</td>
+            </tr>
 
-        <tr>
-            <td>Maracujá (1KG)</td>
-            <td class="benefits">Propriedades calmantes</td>
-            <td class="product-quality">Cultivo vertical</td>
-            <td>R$ 12,99</td>
-        </tr>
+            <tr>
+                <td>Maracujá (1KG)</td>
+                <td class="benefits">Propriedades calmantes</td>
+                <td class="product-quality">Cultivo vertical</td>
+                <td>R$ 12,99</td>
+            </tr>
 
-        <tr>
-            <td>Melancia (1KG)</td>
-            <td class="benefits">Hidratação e licopeno</td>
-            <td class="product-quality">Seleção por sonoridade</td>
-            <td>R$ 4,99</td>
-        </tr>
+            <tr>
+                <td>Melancia (1KG)</td>
+                <td class="benefits">Hidratação e licopeno</td>
+                <td class="product-quality">Seleção por sonoridade</td>
+                <td>R$ 4,99</td>
+            </tr>
 
-        <tr>
-            <td>Morango (1KG)</td>
-            <td class="benefits">Antioxidantes e vitamina C</td>
-            <td class="product-quality">Cultivo suspenso</td>
-            <td>R$ 4,99</td>
-        </tr>
+            <tr>
+                <td>Morango (1KG)</td>
+                <td class="benefits">Antioxidantes e vitamina C</td>
+                <td class="product-quality">Cultivo suspenso</td>
+                <td>R$ 4,99</td>
+            </tr>
 
-        <tr>
-            <td>Ponkan (1KG)</td>
-            <td class="benefits">Fibras e vitamina C</td>
-            <td class="product-quality">Colhido manualmente</td>
-            <td>R$ 3,99</td>
-        </tr>
+            <tr>
+                <td>Ponkan (1KG)</td>
+                <td class="benefits">Fibras e vitamina C</td>
+                <td class="product-quality">Colhido manualmente</td>
+                <td>R$ 3,99</td>
+            </tr>
 
-        <tr>
-            <td>Pêssego (1KG)</td>
-            <td class="benefits">Betacaroteno e niacina</td>
-            <td class="product-quality">Protegido individualmente</td>
-            <td>R$ 12,99</td>
-        </tr>
+            <tr>
+                <td>Pêssego (1KG)</td>
+                <td class="benefits">Betacaroteno e niacina</td>
+                <td class="product-quality">Protegido individualmente</td>
+                <td>R$ 12,99</td>
+            </tr>
 
-        <tr>
-            <td>Uva (1KG)</td>
-            <td class="benefits">Resveratrol e energia</td>
-            <td class="product-quality">Clusters intactos</td>
-            <td>R$ 9,99</td>
-        </tr>
+            <tr>
+                <td>Uva (1KG)</td>
+                <td class="benefits">Resveratrol e energia</td>
+                <td class="product-quality">Clusters intactos</td>
+                <td>R$ 9,99</td>
+            </tr>
         </table>
     </div>
 
-    <!-- Verduras -->
     <div class="category-section">
         <div class="quality-badge">🥬 Colhidas Diariamente | 💧 Hidropônicas Disponíveis</div>
         <h2>🥦 Verduras Nutritivas</h2>
         <table>
-          <tr><th>Produto</th><th>Benefícios</th><th>Qualidade</th><th>Preço</th></tr>
-            <!-- Conteúdo existente das verduras -->
+            <tr><th>Produto</th><th>Benefícios</th><th>Qualidade</th><th>Preço</th></tr>
             <tr>
-              <td>Agrião (1 Maço)</td>
-              <td class="benefits">Rico em vitaminas A, C e K</td>
-              <td class="product-quality">	Cortado rente à base com faca ou tesoura </td>
-              <td>R$ 6,99</td>
-          </tr>
-          <tr>
-            <td>Alface Americana (1 UNIDADE)</td>
-            <td class="benefits">Fonte de fibras e água e Promove saciedade e hidratação</td>
-            <td class="product-quality">Colhida inteira pela base com faca afiada </td>
-            <td>R$ 2,99</td>
-        </tr>
-        <tr>
-          <td>Alface Crespa (1 UNIDADE)</td>
-          <td class="benefits">	Rica em antioxidantes</td>
-          <td class="product-quality">	Cortada inteira na base, manualmente </td>
-          <td>R$ 1,99</td>
-      </tr>
-      <tr>
-        <td>Acelga (1 UNIDADE)</td>
-        <td class="benefits">Regula o intestino</td>
-        <td class="product-quality"> Colheita manual pela base, de preferência ao amanhecer </td>
-        <td>R$ 5,99</td>
-    </tr>
+                <td>Agrião (1 Maço)</td>
+                <td class="benefits">Rico em vitaminas A, C e K</td>
+                <td class="product-quality">Cortado rente à base com faca ou tesoura</td>
+                <td>R$ 6,99</td>
+            </tr>
             <tr>
-              <td>Almeirão (1 Maço)</td>
-              <td class="benefits">Estimula o fígado</td>
-              <td class="product-quality"> Cortado rente ao solo, sem arrancar a raiz</td>
-              <td>R$ 5,99</td>
-          </tr>
-          <tr>
-            <td>Cebolinha (1 Maço)</td>
-            <td class="benefits">	Realça sabor e fortalece imunidade</td>
-            <td class="product-quality"> Cortada com tesoura a cerca de 5 cm da base</td>
-            <td>R$ 1,99</td>
-        </tr>
-        <tr>
-          <td>Chicória (1 Maço)</td>
-          <td class="benefits">Auxilia na digestão	</td>
-          <td class="product-quality"> 	Colheita manual da planta inteira pela base</td>
-          <td>R$ 5,99</td>
-      </tr>
-      <tr>
-        <td>Couve (1 Maço)</td>
-        <td class="benefits">	Rica em ferro e cálcio	</td>
-        <td class="product-quality">Folhas colhidas individualmente com faca</td>
-        <td>R$ 1,99</td>
-    </tr>
-    <tr>
-      <td>Couve-Flor (1 UNIDADE)</td>
-      <td class="benefits">	Versátil e antioxidante</td>
-      <td class="product-quality">	Cabeça central cortada com faca quando firme</td>
-      <td>R$ 7,99</td>
-  </tr>
-  <tr>
-    <td>Escarola (1 UNIDADE)</td>
-    <td class="benefits">		Fortalece imunidade</td>
-    <td class="product-quality">Cortada rente ao solo, antes da floração</td>
-    <td>R$ 10,99</td>
-</tr>
-<tr>
-  <td>Espinafre (1 UNIDADE)</td>
-  <td class="benefits">	Combate a anemia</td>
-  <td class="product-quality">	Colhida manualmente folha a folha ou a planta inteira</td>
-  <td>R$ 10,99</td>
-</tr>
-<tr>
-  <td>Mostarda (1 UNIDADE)</td>
-  <td class="benefits">	Estimula o metabolismo</td>
-  <td class="product-quality">	Folhas cortadas próximas à base</td>
-  <td>R$ 3,99</td>
-</tr>
-<tr>
-  <td>Nabo (1KG)</td>
-  <td class="benefits">	Facilita digestão e é diurético</td>
-  <td class="product-quality">Retirado com cuidado puxando a raiz do solo</td>
-  <td>R$ 3,99</td>
-</tr>
-<tr>
-  <td>Pimentão (1KG)</td>
-  <td class="benefits">		Rico em vitamina C</td>
-  <td class="product-quality">Colhido com tesoura ao atingir cor e tamanho ideal</td>
-  <td>R$ 7,99</td>
-</tr>
-<tr>
-  <td>Quiabo (1KG)</td>
-  <td class="benefits">	Controla o açúcar no sangue</td>
-  <td class="product-quality">	Colhido jovem, com 7–10 cm, manualmente</td>
-  <td>R$ 5,99</td>
-</tr>
-<tr>
-  <td>Rabanete (1KG)</td>
-  <td class="benefits">	Refrescante e digestivo</td>
-  <td class="product-quality">	Puxado do solo manualmente ao atingir 3–4 cm</td>
-  <td>R$ 6,99</td>
-</tr>
-<tr>
-  <td>Repolho (1 UNIDADE)</td>
-  <td class="benefits">		Ajuda na digestão</td>
-  <td class="product-quality">Cabeça colhida inteira pela base com faca</td>
-  <td>R$ 6,99</td>
-</tr>
-<tr>
-  <td>Repolho Roxo (1 UNIDADE)</td>
-  <td class="benefits">		Antioxidante potente</td>
-  <td class="product-quality">	Mesmo processo do repolho comum</td>
-  <td>R$ 5,99</td>
-</tr>
-<tr>
-  <td>Rúcula (1 Maço)</td>
-  <td class="benefits">	Fortalece ossos e imunidade</td>
-  <td class="product-quality">Cortada rente ao solo com faca ou tesoura</td>
-  <td>R$ 4,99</td>
-</tr>
-<tr>
-  <td>Salsão (Aipo) (1 Maço)</td>
-  <td class="benefits">Reduz pressão arterial</td>
-  <td class="product-quality">Colheita da planta inteira pela base</td>
-  <td>R$ 7,99</td>
-</tr>
+                <td>Alface Americana (1 UNIDADE)</td>
+                <td class="benefits">Fonte de fibras e água e Promove saciedade e hidratação</td>
+                <td class="product-quality">Colhida inteira pela base com faca afiada</td>
+                <td>R$ 2,99</td>
+            </tr>
+            <tr>
+                <td>Alface Crespa (1 UNIDADE)</td>
+                <td class="benefits">Rica em antioxidantes</td>
+                <td class="product-quality">Cortada inteira na base, manualmente</td>
+                <td>R$ 1,99</td>
+            </tr>
+            <tr>
+                <td>Acelga (1 UNIDADE)</td>
+                <td class="benefits">Regula o intestino</td>
+                <td class="product-quality">Colheita manual pela base, de preferência ao amanhecer</td>
+                <td>R$ 5,99</td>
+            </tr>
+            <tr>
+                <td>Almeirão (1 Maço)</td>
+                <td class="benefits">Estimula o fígado</td>
+                <td class="product-quality">Cortado rente ao solo, sem arrancar a raiz</td>
+                <td>R$ 5,99</td>
+            </tr>
+            <tr>
+                <td>Cebolinha (1 Maço)</td>
+                <td class="benefits">Realça sabor e fortalece imunidade</td>
+                <td class="product-quality">Cortada com tesoura a cerca de 5 cm da base</td>
+                <td>R$ 1,99</td>
+            </tr>
+            <tr>
+                <td>Chicória (1 Maço)</td>
+                <td class="benefits">Auxilia na digestão</td>
+                <td class="product-quality">Colheita manual da planta inteira pela base</td>
+                <td>R$ 5,99</td>
+            </tr>
+            <tr>
+                <td>Couve (1 Maço)</td>
+                <td class="benefits">Rica em ferro e cálcio</td>
+                <td class="product-quality">Folhas colhidas individualmente com faca</td>
+                <td>R$ 1,99</td>
+            </tr>
+            <tr>
+                <td>Couve-Flor (1 UNIDADE)</td>
+                <td class="benefits">Versátil e antioxidante</td>
+                <td class="product-quality">Cabeça central cortada com faca quando firme</td>
+                <td>R$ 7,99</td>
+            </tr>
+            <tr>
+                <td>Escarola (1 UNIDADE)</td>
+                <td class="benefits">Fortalece imunidade</td>
+                <td class="product-quality">Cortada rente ao solo, antes da floração</td>
+                <td>R$ 10,99</td>
+            </tr>
+            <tr>
+                <td>Espinafre (1 UNIDADE)</td>
+                <td class="benefits">Combate a anemia</td>
+                <td class="product-quality">Colhida manualmente folha a folha ou a planta inteira</td>
+                <td>R$ 10,99</td>
+            </tr>
+            <tr>
+                <td>Mostarda (1 UNIDADE)</td>
+                <td class="benefits">Estimula o metabolismo</td>
+                <td class="product-quality">Folhas cortadas próximas à base</td>
+                <td>R$ 3,99</td>
+            </tr>
+            <tr>
+                <td>Nabo (1KG)</td>
+                <td class="benefits">Facilita digestão e é diurético</td>
+                <td class="product-quality">Retirado com cuidado puxando a raiz do solo</td>
+                <td>R$ 3,99</td>
+            </tr>
+            <tr>
+                <td>Pimentão (1KG)</td>
+                <td class="benefits">Rico em vitamina C</td>
+                <td class="product-quality">Colhido com tesoura ao atingir cor e tamanho ideal</td>
+                <td>R$ 7,99</td>
+            </tr>
+            <tr>
+                <td>Quiabo (1KG)</td>
+                <td class="benefits">Controla o açúcar no sangue</td>
+                <td class="product-quality">Colhido jovem, com 7–10 cm, manualmente</td>
+                <td>R$ 5,99</td>
+            </tr>
+            <tr>
+                <td>Rabanete (1KG)</td>
+                <td class="benefits">Refrescante e digestivo</td>
+                <td class="product-quality">Puxado do solo manualmente ao atingir 3–4 cm</td>
+                <td>R$ 6,99</td>
+            </tr>
+            <tr>
+                <td>Repolho (1 UNIDADE)</td>
+                <td class="benefits">Ajuda na digestão</td>
+                <td class="product-quality">Cabeça colhida inteira pela base com faca</td>
+                <td>R$ 6,99</td>
+            </tr>
+            <tr>
+                <td>Repolho Roxo (1 UNIDADE)</td>
+                <td class="benefits">Antioxidante potente</td>
+                <td class="product-quality">Mesmo processo do repolho comum</td>
+                <td>R$ 5,99</td>
+            </tr>
+            <tr>
+                <td>Rúcula (1 Maço)</td>
+                <td class="benefits">Fortalece ossos e imunidade</td>
+                <td class="product-quality">Cortada rente ao solo com faca ou tesoura</td>
+                <td>R$ 4,99</td>
+            </tr>
+            <tr>
+                <td>Salsão (Aipo) (1 Maço)</td>
+                <td class="benefits">Reduz pressão arterial</td>
+                <td class="product-quality">Colheita da planta inteira pela base</td>
+                <td>R$ 7,99</td>
+            </tr>
         </table>
     </div>
 
-    <!-- Legumes -->
     <div class="category-section">
         <div class="quality-badge">🥕 SEM TRANSGÊNICOS | 🧼 LAVAGEM PROFISSIONAL</div>
         <h2>🥕 Legumes Selecionados</h2>
         <table>
             <tr><th>Produto</th><th>Benefícios</th><th>Qualidade</th><th>Preço</th></tr>
             <tr>
-              <tr>
                 <td>Abóbora (1KG)</td>
                 <td class="benefits">Rica em fibras e vitamina A</td>
                 <td class="product-quality">Selecionadas por tamanho</td>
@@ -529,399 +533,394 @@ tr:hover {
                 <td class="product-quality">Pequenos e uniformes</td>
                 <td>R$ 3,99</td>
             </tr>
-            
         </table>
     </div>
 
-    <!-- Grãos -->
     <div class="category-section">
         <div class="quality-badge">🌾 ARMAZENAMENTO CONTROLADO | ⏳ VALIDADE ESTENDIDA</div>
         <h2>🌾 Grãos Integrais</h2>
         <table>
-          <tr>
-            <td>Amaranto (1KG)</td>
-            <td class="benefits">Fonte de proteínas e minerais</td>
-            <td class="product-quality">Grãos selecionados e limpos</td>
-            <td>R$ 3,99</td>
-        </tr>
-        <tr>
-            <td>Arroz (1KG)</td>
-            <td class="benefits">Fonte de energia e carboidratos</td>
-            <td class="product-quality">Grãos polidos e inteiros</td>
-            <td>R$ 4,99</td>
-        </tr>
-        <tr>
-            <td>Arroz Integral (1KG)</td>
-            <td class="benefits">Rico em fibras e vitaminas do complexo B</td>
-            <td class="product-quality">Grãos inteiros e escuros</td>
-            <td>R$ 2,99</td>
-        </tr>
-        <tr>
-            <td>Aveia (1KG)</td>
-            <td class="benefits">Ajuda no controle do colesterol</td>
-            <td class="product-quality">Flocos graúdos e naturais</td>
-            <td>R$ 8,99</td>
-        </tr>
-        <tr>
-            <td>Amendoim (1KG)</td>
-            <td class="benefits">Fonte de proteína vegetal</td>
-            <td class="product-quality">Torrados e crocantes</td>
-            <td>R$ 6,99</td>
-        </tr>
-        <tr>
-            <td>Café (1KG)</td>
-            <td class="benefits">Estimulante natural e antioxidante</td>
-            <td class="product-quality">Torra média, sabor encorpado</td>
-            <td>R$ 29,99</td>
-        </tr>
-        <tr>
-            <td>Cevada (1KG)</td>
-            <td class="benefits">Ajuda na digestão e é rica em fibras</td>
-            <td class="product-quality">Grãos limpos e secos</td>
-            <td>R$ 9,99</td>
-        </tr>
-        <tr>
-            <td>Centeio (1KG)</td>
-            <td class="benefits">Reduz o colesterol e controla o apetite</td>
-            <td class="product-quality">Grãos rústicos e inteiros</td>
-            <td>R$ 7,99</td>
-        </tr>
-        <tr>
-            <td>Ervilha (1KG)</td>
-            <td class="benefits">Fonte de proteínas e ferro</td>
-            <td class="product-quality">Verdes e uniformes</td>
-            <td>R$ 9,99</td>
-        </tr>
-        <tr>
-            <td>Feijão Preto (1KG)</td>
-            <td class="benefits">Fonte de ferro e fibras</td>
-            <td class="product-quality">Grãos limpos e inteiros</td>
-            <td>R$ 4,99</td>
-        </tr>
-        <tr>
-            <td>Feijão Branco (1KG)</td>
-            <td class="benefits">Rico em proteínas e cálcio</td>
-            <td class="product-quality">Claros e sem impurezas</td>
-            <td>R$ 3,99</td>
-        </tr>
-        <tr>
-            <td>Granola (1KG)</td>
-            <td class="benefits">Fonte de fibras e energia</td>
-            <td class="product-quality">Com frutas secas e cereais</td>
-            <td>R$ 7,99</td>
-        </tr>
-        <tr>
-            <td>Grão de Bico (1KG)</td>
-            <td class="benefits">Rico em proteínas e fibras</td>
-            <td class="product-quality">Grãos firmes e claros</td>
-            <td>R$ 4,99</td>
-        </tr>
-        <tr>
-            <td>Lentilha (1KG)</td>
-            <td class="benefits">Ajuda na digestão e controle da glicose</td>
-            <td class="product-quality">Pequenas e uniformes</td>
-            <td>R$ 6,99</td>
-        </tr>
-        <tr>
-            <td>Linhaça (1KG)</td>
-            <td class="benefits">Fonte de ômega-3 e fibras</td>
-            <td class="product-quality">Douradas e frescas</td>
-            <td>R$ 10,99</td>
-        </tr>
-        <tr>
-            <td>Milho (1KG)</td>
-            <td class="benefits">Rico em energia e antioxidantes</td>
-            <td class="product-quality">Grãos amarelos e secos</td>
-            <td>R$ 7,99</td>
-        </tr>
-        <tr>
-            <td>Pinhão (1KG)</td>
-            <td class="benefits">Fonte de energia e vitaminas</td>
-            <td class="product-quality">Grãos grandes e frescos</td>
-            <td>R$ 9,99</td>
-        </tr>
-        <tr>
-            <td>Quinoa (1KG)</td>
-            <td class="benefits">Proteína completa e sem glúten</td>
-            <td class="product-quality">Grãos claros e limpos</td>
-            <td>R$ 9,99</td>
-        </tr>
-        <tr>
-            <td>Soja (1KG)</td>
-            <td class="benefits">Fonte de proteína vegetal</td>
-            <td class="product-quality">Grãos inteiros e claros</td>
-            <td>R$ 5,99</td>
-        </tr>
-        <tr>
-            <td>Trigo (1KG)</td>
-            <td class="benefits">Rico em fibras e carboidratos</td>
-            <td class="product-quality">Grãos secos e inteiros</td>
-            <td>R$ 4,99</td>
-        </tr>
-        
-            <!-- Adicione outros grãos -->
+            <tr><th>Produto</th><th>Benefícios</th><th>Qualidade</th><th>Preço</th></tr>
+            <tr>
+                <td>Amaranto (1KG)</td>
+                <td class="benefits">Fonte de proteínas e minerais</td>
+                <td class="product-quality">Grãos selecionados e limpos</td>
+                <td>R$ 3,99</td>
+            </tr>
+            <tr>
+                <td>Arroz (1KG)</td>
+                <td class="benefits">Fonte de energia e carboidratos</td>
+                <td class="product-quality">Grãos polidos e inteiros</td>
+                <td>R$ 4,99</td>
+            </tr>
+            <tr>
+                <td>Arroz Integral (1KG)</td>
+                <td class="benefits">Rico em fibras e vitaminas do complexo B</td>
+                <td class="product-quality">Grãos inteiros e escuros</td>
+                <td>R$ 2,99</td>
+            </tr>
+            <tr>
+                <td>Aveia (1KG)</td>
+                <td class="benefits">Ajuda no controle do colesterol</td>
+                <td class="product-quality">Flocos graúdos e naturais</td>
+                <td>R$ 8,99</td>
+            </tr>
+            <tr>
+                <td>Amendoim (1KG)</td>
+                <td class="benefits">Fonte de proteína vegetal</td>
+                <td class="product-quality">Torrados e crocantes</td>
+                <td>R$ 6,99</td>
+            </tr>
+            <tr>
+                <td>Café (1KG)</td>
+                <td class="benefits">Estimulante natural e antioxidante</td>
+                <td class="product-quality">Torra média, sabor encorpado</td>
+                <td>R$ 29,99</td>
+            </tr>
+            <tr>
+                <td>Cevada (1KG)</td>
+                <td class="benefits">Ajuda na digestão e é rica em fibras</td>
+                <td class="product-quality">Grãos limpos e secos</td>
+                <td>R$ 9,99</td>
+            </tr>
+            <tr>
+                <td>Centeio (1KG)</td>
+                <td class="benefits">Reduz o colesterol e controla o apetite</td>
+                <td class="product-quality">Grãos rústicos e inteiros</td>
+                <td>R$ 7,99</td>
+            </tr>
+            <tr>
+                <td>Ervilha (1KG)</td>
+                <td class="benefits">Fonte de proteínas e ferro</td>
+                <td class="product-quality">Verdes e uniformes</td>
+                <td>R$ 9,99</td>
+            </tr>
+            <tr>
+                <td>Feijão Preto (1KG)</td>
+                <td class="benefits">Fonte de ferro e fibras</td>
+                <td class="product-quality">Grãos limpos e inteiros</td>
+                <td>R$ 4,99</td>
+            </tr>
+            <tr>
+                <td>Feijão Branco (1KG)</td>
+                <td class="benefits">Rico em proteínas e cálcio</td>
+                <td class="product-quality">Claros e sem impurezas</td>
+                <td>R$ 3,99</td>
+            </tr>
+            <tr>
+                <td>Granola (1KG)</td>
+                <td class="benefits">Fonte de fibras e energia</td>
+                <td class="product-quality">Com frutas secas e cereais</td>
+                <td>R$ 7,99</td>
+            </tr>
+            <tr>
+                <td>Grão de Bico (1KG)</td>
+                <td class="benefits">Rico em proteínas e fibras</td>
+                <td class="product-quality">Grãos firmes e claros</td>
+                <td>R$ 4,99</td>
+            </tr>
+            <tr>
+                <td>Lentilha (1KG)</td>
+                <td class="benefits">Ajuda na digestão e controle da glicose</td>
+                <td class="product-quality">Pequenas e uniformes</td>
+                <td>R$ 6,99</td>
+            </tr>
+            <tr>
+                <td>Linhaça (1KG)</td>
+                <td class="benefits">Fonte de ômega-3 e fibras</td>
+                <td class="product-quality">Douradas e frescas</td>
+                <td>R$ 10,99</td>
+            </tr>
+            <tr>
+                <td>Milho (1KG)</td>
+                <td class="benefits">Rico em energia e antioxidantes</td>
+                <td class="product-quality">Grãos amarelos e secos</td>
+                <td>R$ 7,99</td>
+            </tr>
+            <tr>
+                <td>Pinhão (1KG)</td>
+                <td class="benefits">Fonte de energia e vitaminas</td>
+                <td class="product-quality">Grãos grandes e frescos</td>
+                <td>R$ 9,99</td>
+            </tr>
+            <tr>
+                <td>Quinoa (1KG)</td>
+                <td class="benefits">Proteína completa e sem glúten</td>
+                <td class="product-quality">Grãos claros e limpos</td>
+                <td>R$ 9,99</td>
+            </tr>
+            <tr>
+                <td>Soja (1KG)</td>
+                <td class="benefits">Fonte de proteína vegetal</td>
+                <td class="product-quality">Grãos inteiros e claros</td>
+                <td>R$ 5,99</td>
+            </tr>
+            <tr>
+                <td>Trigo (1KG)</td>
+                <td class="benefits">Rico em fibras e carboidratos</td>
+                <td class="product-quality">Grãos secos e inteiros</td>
+                <td>R$ 4,99</td>
+            </tr>
         </table>
     </div>
 
-    <!-- Temperos -->
     <div class="category-section">
         <div class="quality-badge">🧂 SECAGEM NATURAL | 🌡️ CONTROLE DE UMIDADE</div>
         <h2>🌿 Temperos Naturais</h2>
         <table>
-          <tr>
-            <td>Açafrão Seco (1KG)</td>
-            <td class="benefits">Anti-inflamatório natural</td>
-            <td class="product-quality">Seco e bem armazenado</td>
-            <td>R$ 16,99</td>
-        </tr>
-        <tr>
-            <td>Alho Poró (1KG)</td>
-            <td class="benefits">Rico em fibras e antioxidantes</td>
-            <td class="product-quality">Frescos e inteiros</td>
-            <td>R$ 11,99</td>
-        </tr>
-        <tr>
-            <td>Alecrim (1KG)</td>
-            <td class="benefits">Melhora a digestão</td>
-            <td class="product-quality">Folhas secas e aromáticas</td>
-            <td>R$ 5,99</td>
-        </tr>
-        <tr>
-            <td>Canela (1KG)</td>
-            <td class="benefits">Estimulante e antioxidante</td>
-            <td class="product-quality">Em pau ou moída</td>
-            <td>R$ 10,99</td>
-        </tr>
-        <tr>
-            <td>Coentro (1KG)</td>
-            <td class="benefits">Ajuda na digestão</td>
-            <td class="product-quality">Folhas frescas e aromáticas</td>
-            <td>R$ 2,99</td>
-        </tr>
-        <tr>
-            <td>Cominho (1KG)</td>
-            <td class="benefits">Rico em ferro</td>
-            <td class="product-quality">Moído e puro</td>
-            <td>R$ 14,99</td>
-        </tr>
-        <tr>
-            <td>Colorau (1KG)</td>
-            <td class="benefits">Realça a cor dos alimentos</td>
-            <td class="product-quality">Moído e natural</td>
-            <td>R$ 14,99</td>
-        </tr>
-        <tr>
-            <td>Curry (1KG)</td>
-            <td class="benefits">Mistura de especiarias antioxidantes</td>
-            <td class="product-quality">Aromático e bem conservado</td>
-            <td>R$ 10,99</td>
-        </tr>
-        <tr>
-            <td>Cúrcuma (1KG)</td>
-            <td class="benefits">Anti-inflamatório e digestivo</td>
-            <td class="product-quality">Moída, cor intensa</td>
-            <td>R$ 9,99</td>
-        </tr>
-        <tr>
-            <td>Gengibre (1KG)</td>
-            <td class="benefits">Termogênico e digestivo</td>
-            <td class="product-quality">Raízes frescas e firmes</td>
-            <td>R$ 8,99</td>
-        </tr>
-        <tr>
-            <td>Lemon Pepper (1KG)</td>
-            <td class="benefits">Toque cítrico e apimentado</td>
-            <td class="product-quality">Mistura seca e aromática</td>
-            <td>R$ 8,99</td>
-        </tr>
-        <tr>
-            <td>Louro (1KG)</td>
-            <td class="benefits">Melhora o sabor dos cozidos</td>
-            <td class="product-quality">Folhas secas e inteiras</td>
-            <td>R$ 18,99</td>
-        </tr>
-        <tr>
-            <td>Manjerona (1KG)</td>
-            <td class="benefits">Calmante e digestiva</td>
-            <td class="product-quality">Folhas secas e suaves</td>
-            <td>R$ 14,99</td>
-        </tr>
-        <tr>
-            <td>Manjericão (1KG)</td>
-            <td class="benefits">Aromático e digestivo</td>
-            <td class="product-quality">Folhas frescas e escuras</td>
-            <td>R$ 20,99</td>
-        </tr>
-        <tr>
-            <td>Orégano (1KG)</td>
-            <td class="benefits">Antibacteriano e sabor marcante</td>
-            <td class="product-quality">Seco e aromático</td>
-            <td>R$ 12,99</td>
-        </tr>
-        <tr>
-            <td>Páprica (1KG)</td>
-            <td class="benefits">Aromática e rica em antioxidantes</td>
-            <td class="product-quality">Doce ou picante</td>
-            <td>R$ 10,99</td>
-        </tr>
-        <tr>
-            <td>Pega Esposa (1KG)</td>
-            <td class="benefits">Usado em chás e temperos caseiros</td>
-            <td class="product-quality">Planta seca e bem armazenada</td>
-            <td>R$ 9,99</td>
-        </tr>
-        <tr>
-            <td>Pimenta-do-Reino (1KG)</td>
-            <td class="benefits">Termogênica e aromática</td>
-            <td class="product-quality">Preta moída ou em grãos</td>
-            <td>R$ 14,99</td>
-        </tr>
-        <tr>
-            <td>Salsinha (1 Masso)</td>
-            <td class="benefits">Rica em vitaminas e minerais</td>
-            <td class="product-quality">Fresca e bem lavada</td>
-            <td>R$ 1,99</td>
-        </tr>
-        <tr>
-            <td>Tomilho (1KG)</td>
-            <td class="benefits">Antisséptico e digestivo</td>
-            <td class="product-quality">Folhas secas e aromáticas</td>
-            <td>R$ 4,99</td>
-        </tr>
-        
+            <tr><th>Produto</th><th>Benefícios</th><th>Qualidade</th><th>Preço</th></tr>
+            <tr>
+                <td>Açafrão Seco (1KG)</td>
+                <td class="benefits">Anti-inflamatório natural</td>
+                <td class="product-quality">Seco e bem armazenado</td>
+                <td>R$ 16,99</td>
+            </tr>
+            <tr>
+                <td>Alho Poró (1KG)</td>
+                <td class="benefits">Rico em fibras e antioxidantes</td>
+                <td class="product-quality">Frescos e inteiros</td>
+                <td>R$ 11,99</td>
+            </tr>
+            <tr>
+                <td>Alecrim (1KG)</td>
+                <td class="benefits">Melhora a digestão</td>
+                <td class="product-quality">Folhas secas e aromáticas</td>
+                <td>R$ 5,99</td>
+            </tr>
+            <tr>
+                <td>Canela (1KG)</td>
+                <td class="benefits">Estimulante e antioxidante</td>
+                <td class="product-quality">Em pau ou moída</td>
+                <td>R$ 10,99</td>
+            </tr>
+            <tr>
+                <td>Coentro (1KG)</td>
+                <td class="benefits">Ajuda na digestão</td>
+                <td class="product-quality">Folhas frescas e aromáticas</td>
+                <td>R$ 2,99</td>
+            </tr>
+            <tr>
+                <td>Cominho (1KG)</td>
+                <td class="benefits">Rico em ferro</td>
+                <td class="product-quality">Moído e puro</td>
+                <td>R$ 14,99</td>
+            </tr>
+            <tr>
+                <td>Colorau (1KG)</td>
+                <td class="benefits">Realça a cor dos alimentos</td>
+                <td class="product-quality">Moído e natural</td>
+                <td>R$ 14,99</td>
+            </tr>
+            <tr>
+                <td>Curry (1KG)</td>
+                <td class="benefits">Mistura de especiarias antioxidantes</td>
+                <td class="product-quality">Aromático e bem conservado</td>
+                <td>R$ 10,99</td>
+            </tr>
+            <tr>
+                <td>Cúrcuma (1KG)</td>
+                <td class="benefits">Anti-inflamatório e digestivo</td>
+                <td class="product-quality">Moída, cor intensa</td>
+                <td>R$ 9,99</td>
+            </tr>
+            <tr>
+                <td>Gengibre (1KG)</td>
+                <td class="benefits">Termogênico e digestivo</td>
+                <td class="product-quality">Raízes frescas e firmes</td>
+                <td>R$ 8,99</td>
+            </tr>
+            <tr>
+                <td>Lemon Pepper (1KG)</td>
+                <td class="benefits">Toque cítrico e apimentado</td>
+                <td class="product-quality">Mistura seca e aromática</td>
+                <td>R$ 8,99</td>
+            </tr>
+            <tr>
+                <td>Louro (1KG)</td>
+                <td class="benefits">Melhora o sabor dos cozidos</td>
+                <td class="product-quality">Folhas secas e inteiras</td>
+                <td>R$ 18,99</td>
+            </tr>
+            <tr>
+                <td>Manjerona (1KG)</td>
+                <td class="benefits">Calmante e digestiva</td>
+                <td class="product-quality">Folhas secas e suaves</td>
+                <td>R$ 14,99</td>
+            </tr>
+            <tr>
+                <td>Manjericão (1KG)</td>
+                <td class="benefits">Aromático e digestivo</td>
+                <td class="product-quality">Folhas frescas e escuras</td>
+                <td>R$ 20,99</td>
+            </tr>
+            <tr>
+                <td>Orégano (1KG)</td>
+                <td class="benefits">Antibacteriano e sabor marcante</td>
+                <td class="product-quality">Seco e aromático</td>
+                <td>R$ 12,99</td>
+            </tr>
+            <tr>
+                <td>Páprica (1KG)</td>
+                <td class="benefits">Aromática e rica em antioxidantes</td>
+                <td class="product-quality">Doce ou picante</td>
+                <td>R$ 10,99</td>
+            </tr>
+            <tr>
+                <td>Pega Esposa (1KG)</td>
+                <td class="benefits">Usado em chás e temperos caseiros</td>
+                <td class="product-quality">Planta seca e bem armazenada</td>
+                <td>R$ 9,99</td>
+            </tr>
+            <tr>
+                <td>Pimenta-do-Reino (1KG)</td>
+                <td class="benefits">Termogênica e aromática</td>
+                <td class="product-quality">Preta moída ou em grãos</td>
+                <td>R$ 14,99</td>
+            </tr>
+            <tr>
+                <td>Salsinha (1 Masso)</td>
+                <td class="benefits">Rica em vitaminas e minerais</td>
+                <td class="product-quality">Fresca e bem lavada</td>
+                <td>R$ 1,99</td>
+            </tr>
+            <tr>
+                <td>Tomilho (1KG)</td>
+                <td class="benefits">Antisséptico e digestivo</td>
+                <td class="product-quality">Folhas secas e aromáticas</td>
+                <td>R$ 4,99</td>
+            </tr>
         </table>
     </div>
 
-    <!-- Artesanatos -->
     <div class="category-section">
         <div class="quality-badge">🎨 MATERIAIS SUSTENTÁVEIS | ✋ FEITO À MÃO</div>
         <h2>🧵 Artesanatos Locais</h2>
         <table>
-          <tr>
-            <td>Amigurumi (1 Unidade)</td>
-            <td class="benefits">Peça decorativa e artesanal</td>
-            <td class="product-quality">Feito à mão com lã de qualidade</td>
-            <td>R$ 35,99</td>
-        </tr>
-        <tr>
-            <td>Artesanato Reciclado (1 Unidade)</td>
-            <td class="benefits">Sustentável e criativo</td>
-            <td class="product-quality">Feito com materiais reutilizados</td>
-            <td>R$ 9,99</td>
-        </tr>
-        <tr>
-            <td>Bijuterias (1 Unidade)</td>
-            <td class="benefits">Estilo acessível e artesanal</td>
-            <td class="product-quality">Peças exclusivas e coloridas</td>
-            <td>R$ 15,99</td>
-        </tr>
-        <tr>
-            <td>Biscuit Artesanais (1 Unidade)</td>
-            <td class="benefits">Personalizado para eventos</td>
-            <td class="product-quality">Modelagem detalhada</td>
-            <td>R$ 40,99</td>
-        </tr>
-        <tr>
-            <td>Bordados (1 Unidade)</td>
-            <td class="benefits">Detalhes finos e delicados</td>
-            <td class="product-quality">Feito à mão com linha de algodão</td>
-            <td>R$ 29,99</td>
-        </tr>
-        <tr>
-            <td>Boneca De Pano (1 Unidade)</td>
-            <td class="benefits">Brinquedo artesanal e decorativo</td>
-            <td class="product-quality">Confeccionada com tecido e carinho</td>
-            <td>R$ 25,99</td>
-        </tr>
-        <tr>
-            <td>Cartonagem (1 Unidade)</td>
-            <td class="benefits">Organização com charme</td>
-            <td class="product-quality">Feita com papelão e tecido</td>
-            <td>R$ 19,99</td>
-        </tr>
-        <tr>
-            <td>Chapéus de Palha (1 Unidade)</td>
-            <td class="benefits">Ideal para sol e decoração</td>
-            <td class="product-quality">Feito com palha natural</td>
-            <td>R$ 39,99</td>
-        </tr>
-        <tr>
-            <td>Cestaria (1 Unidade)</td>
-            <td class="benefits">Utilitário e decorativo</td>
-            <td class="product-quality">Trançado manual em fibras naturais</td>
-            <td>R$ 35,99</td>
-        </tr>
-        <tr>
-            <td>Cerâmica (1 Unidade)</td>
-            <td class="benefits">Arte e funcionalidade</td>
-            <td class="product-quality">Queimado em forno e esmaltado</td>
-            <td>R$ 39,99</td>
-        </tr>
-        <tr>
-            <td>Crochê (1 Unidade)</td>
-            <td class="benefits">Tecido à mão com carinho</td>
-            <td class="product-quality">Fios resistentes e coloridos</td>
-            <td>R$ 9,99</td>
-        </tr>
-        <tr>
-            <td>Decoupage (1 Unidade)</td>
-            <td class="benefits">Personalização com papel</td>
-            <td class="product-quality">Feito sobre madeira ou vidro</td>
-            <td>R$ 69,99</td>
-        </tr>
-        <tr>
-            <td>Encadernação (1 Unidade)</td>
-            <td class="benefits">Cadernos únicos e artesanais</td>
-            <td class="product-quality">Papéis e capas personalizadas</td>
-            <td>R$ 39,99</td>
-        </tr>
-        <tr>
-            <td>Escultura de Barro (1 Unidade)</td>
-            <td class="benefits">Arte rústica e cultural</td>
-            <td class="product-quality">Modelada à mão</td>
-            <td>R$ 9,99</td>
-        </tr>
-        <tr>
-            <td>Escultura de Madeira (1 Unidade)</td>
-            <td class="benefits">Obra de arte esculpida</td>
-            <td class="product-quality">Feita em madeira maciça</td>
-            <td>R$ 99,99</td>
-        </tr>
-        <tr>
-            <td>Feltro (1 Unidade)</td>
-            <td class="benefits">Decorativo e criativo</td>
-            <td class="product-quality">Costurado e recheado manualmente</td>
-            <td>R$ 49,99</td>
-        </tr>
-        <tr>
-            <td>Origami (1 Unidade)</td>
-            <td class="benefits">Dobradura artística</td>
-            <td class="product-quality">Feito com papel decorativo</td>
-            <td>R$ 7,99</td>
-        </tr>
-        <tr>
-            <td>Sabonete Artesanal (1 Unidade)</td>
-            <td class="benefits">Natural e perfumado</td>
-            <td class="product-quality">Feito com óleos vegetais</td>
-            <td>R$ 9,99</td>
-        </tr>
-        <tr>
-            <td>Tricô (1 Unidade)</td>
-            <td class="benefits">Aconchegante e artesanal</td>
-            <td class="product-quality">Fios macios e trabalhados à mão</td>
-            <td>R$ 9,99</td>
-        </tr>
-        <tr>
-            <td>Velas (1 Unidade)</td>
-            <td class="benefits">Ambiente acolhedor e perfumado</td>
-            <td class="product-quality">Feitas com cera vegetal</td>
-            <td>R$ 11,99</td>
-        </tr>
-              
+            <tr><th>Produto</th><th>Benefícios</th><th>Qualidade</th><th>Preço</th></tr>
+            <tr>
+                <td>Amigurumi (1 Unidade)</td>
+                <td class="benefits">Peça decorativa e artesanal</td>
+                <td class="product-quality">Feito à mão com lã de qualidade</td>
+                <td>R$ 35,99</td>
+            </tr>
+            <tr>
+                <td>Artesanato Reciclado (1 Unidade)</td>
+                <td class="benefits">Sustentável e criativo</td>
+                <td class="product-quality">Feito com materiais reutilizados</td>
+                <td>R$ 9,99</td>
+            </tr>
+            <tr>
+                <td>Bijuterias (1 Unidade)</td>
+                <td class="benefits">Estilo acessível e artesanal</td>
+                <td class="product-quality">Peças exclusivas e coloridas</td>
+                <td>R$ 15,99</td>
+            </tr>
+            <tr>
+                <td>Biscuit Artesanais (1 Unidade)</td>
+                <td class="benefits">Personalizado para eventos</td>
+                <td class="product-quality">Modelagem detalhada</td>
+                <td>R$ 40,99</td>
+            </tr>
+            <tr>
+                <td>Bordados (1 Unidade)</td>
+                <td class="benefits">Detalhes finos e delicados</td>
+                <td class="product-quality">Feito à mão com linha de algodão</td>
+                <td>R$ 29,99</td>
+            </tr>
+            <tr>
+                <td>Boneca De Pano (1 Unidade)</td>
+                <td class="benefits">Brinquedo artesanal e decorativo</td>
+                <td class="product-quality">Confeccionada com tecido e carinho</td>
+                <td>R$ 25,99</td>
+            </tr>
+            <tr>
+                <td>Cartonagem (1 Unidade)</td>
+                <td class="benefits">Organização com charme</td>
+                <td class="product-quality">Feita com papelão e tecido</td>
+                <td>R$ 19,99</td>
+            </tr>
+            <tr>
+                <td>Chapéus de Palha (1 Unidade)</td>
+                <td class="benefits">Ideal para sol e decoração</td>
+                <td class="product-quality">Feito com palha natural</td>
+                <td>R$ 39,99</td>
+            </tr>
+            <tr>
+                <td>Cestaria (1 Unidade)</td>
+                <td class="benefits">Utilitário e decorativo</td>
+                <td class="product-quality">Trançado manual em fibras naturais</td>
+                <td>R$ 35,99</td>
+            </tr>
+            <tr>
+                <td>Cerâmica (1 Unidade)</td>
+                <td class="benefits">Arte e funcionalidade</td>
+                <td class="product-quality">Queimado em forno e esmaltado</td>
+                <td>R$ 39,99</td>
+            </tr>
+            <tr>
+                <td>Crochê (1 Unidade)</td>
+                <td class="benefits">Tecido à mão com carinho</td>
+                <td class="product-quality">Fios resistentes e coloridos</td>
+                <td>R$ 9,99</td>
+            </tr>
+            <tr>
+                <td>Decoupage (1 Unidade)</td>
+                <td class="benefits">Personalização com papel</td>
+                <td class="product-quality">Feito sobre madeira ou vidro</td>
+                <td>R$ 69,99</td>
+            </tr>
+            <tr>
+                <td>Encadernação (1 Unidade)</td>
+                <td class="benefits">Cadernos únicos e artesanais</td>
+                <td class="product-quality">Papéis e capas personalizadas</td>
+                <td>R$ 39,99</td>
+            </tr>
+            <tr>
+                <td>Escultura de Barro (1 Unidade)</td>
+                <td class="benefits">Arte rústica e cultural</td>
+                <td class="product-quality">Modelada à mão</td>
+                <td>R$ 9,99</td>
+            </tr>
+            <tr>
+                <td>Escultura de Madeira (1 Unidade)</td>
+                <td class="benefits">Obra de arte esculpida</td>
+                <td class="product-quality">Feita em madeira maciça</td>
+                <td>R$ 99,99</td>
+            </tr>
+            <tr>
+                <td>Feltro (1 Unidade)</td>
+                <td class="benefits">Decorativo e criativo</td>
+                <td class="product-quality">Costurado e recheado manualmente</td>
+                <td>R$ 49,99</td>
+            </tr>
+            <tr>
+                <td>Origami (1 Unidade)</td>
+                <td class="benefits">Dobradura artística</td>
+                <td class="product-quality">Feito com papel decorativo</td>
+                <td>R$ 7,99</td>
+            </tr>
+            <tr>
+                <td>Sabonete Artesanal (1 Unidade)</td>
+                <td class="benefits">Natural e perfumado</td>
+                <td class="product-quality">Feito com óleos vegetais</td>
+                <td>R$ 9,99</td>
+            </tr>
+            <tr>
+                <td>Tricô (1 Unidade)</td>
+                <td class="benefits">Aconchegante e artesanal</td>
+                <td class="product-quality">Fios macios e trabalhados à mão</td>
+                <td>R$ 9,99</td>
+            </tr>
+            <tr>
+                <td>Velas (1 Unidade)</td>
+                <td class="benefits">Ambiente acolhedor e perfumado</td>
+                <td class="product-quality">Feitas com cera vegetal</td>
+                <td>R$ 11,99</td>
+            </tr>
         </table>
     </div>
 
-    <!-- Derivados -->
+<!-- Derivados -->
     <div class="category-section">
         <div class="quality-badge">🥛 SEM CONSERVANTES | 🏭 PRODUÇÃO ARTESANAL</div>
         <h2>🧀 Derivados Naturais</h2>
@@ -1047,7 +1046,13 @@ tr:hover {
                 <td class="product-quality">Produzido com uvas selecionadas</td>
                 <td>R$ 39,99</td>
             </tr>
-            
+
+    </tr>
+              
+        </table>
+    </div>
+
+  
         </table>
     </div>
 
